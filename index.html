@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUN</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Asistente Moodle CUN</h1>
+        <form id="promptForm" class="border p-4 rounded shadow bg-light" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="role">Imagina que eres un:</label>
+                <input type="text" id="role" name="role" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="expertise">Experto en:</label>
+                <input type="text" id="expertise" name="expertise" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="focus">Con Enfoque en:</label>
+                <input type="text" id="focus" name="focus" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="task">Tu Tarea es redactar preguntas:</label>
+                <input type="text" id="task" name="task" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="topic">Tema:</label>
+                <input type="text" id="topic" name="topic" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="tone">Tono:</label>
+                <input type="text" id="tone" name="tone" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Categoría:</label>
+                <input type="text" id="category" name="category" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="pdfFile">Subir archivo PDF:</label>
+                <input type="file" id="pdfFile" name="pdfFile" class="form-control-file" accept=".pdf" required>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-primary" onclick="generatePrompt()">Generar Prompt</button>
+                <button type="button" class="btn btn-success" onclick="downloadGIFT()">Descargar GIFT</button>
+                <button type="button" class="btn btn-info" onclick="sendToChatGPT()">Enviar a ChatGPT</button>
+            </div>
+        </form>
+        <h2 class="text-center my-4">Salida del Prompt</h2>
+        <pre id="promptOutput" class="p-3 bg-light border rounded"></pre>
+        <button type="button" class="btn btn-info" onclick="copyPrompt()">Copiar Prompt</button>
+        <h2 class="text-center my-4">Respuesta de ChatGPT</h2>
+        <pre id="chatgptResponse" class="p-3 bg-light border rounded"></pre>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
