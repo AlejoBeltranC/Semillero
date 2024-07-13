@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Asistente para Moodle CUN</h1>
+    <form id="promptForm">
+        <label for="role">Imagina que eres un:</label>
+        <input type="text" id="role" name="role" required><br><br>
+
+        <label for="expertise">Experto en:</label>
+        <input type="text" id="expertise" name="expertise" required><br><br>
+
+        <label for="focus">Con Enfoque en:</label>
+        <input type="text" id="focus" name="focus" required><br><br>
+
+        <label for="task">Tu Tarea es redactar preguntas:</label>
+        <input type="text" id="task" name="task" required><br><br>
+
+        <label for="topic">Tema:</label>
+        <input type="text" id="topic" name="topic" required><br><br>
+
+        <label for="tone">Tono:</label>
+        <input type="text" id="tone" name="tone" required><br><br>
+
+        <label for="category">Categoría:</label>
+        <input type="text" id="category" name="category" required><br><br>
+
+        <button type="button" onclick="generatePrompt()">Generar Prompt</button>
+        <button type="button" onclick="downloadGIFT()">Descargar GIFT</button>
+        <button type="button" onclick="sendToChatGPT()">Enviar a ChatGPT</button>
+    </form>
+    <h2>Salida del Prompt</h2>
+    <pre id="promptOutput"></pre>
+    <h2>Respuesta de ChatGPT</h2>
+    <pre id="chatgptResponse"></pre>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
